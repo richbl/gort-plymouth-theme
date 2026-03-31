@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=gort
+Description=gort theme
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/gort
+ScriptFile=/usr/share/plymouth/themes/gort/gort.script
