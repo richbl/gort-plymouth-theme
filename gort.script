@@ -47,43 +47,47 @@ state.time = 0.0;
 boot = 16;
 shut = 134;
 
-//--------------------------------- Display images --------------------------
+// -------------------------------------------------------------------------
+// Display Images
+// -------------------------------------------------------------------------
 
 // Display a list of images while booting
 for (i = 0; i < boot; i++)
-  flyingman_image[i] = Image("progress-" + i + ".png");
-flyingman_sprite = Sprite();
+  startup_image[i] = Image("startup-" + i + ".png");
+startup_sprite = Sprite();
 
 
 // Display a list of images while shutting down
 for (i = 0; i < shut; i++)
-  shutimg_image[i] = Image("shutdown-" + i + ".png");
-shutimg_sprite = Sprite();
+  shutdown_image[i] = Image("shutdown-" + i + ".png");
+shutdown_sprite = Sprite();
 
 // set image position
-flyingman_sprite.SetX(screen.half.w - flyingman_image[0].GetWidth() / 2); # Place images in the center
-flyingman_sprite.SetY((screen.half.h - flyingman_image[0].GetHeight() / 2) - 100);
+startup_sprite.SetX(screen.half.w - startup_image[0].GetWidth() / 2); # Place images in the center
+startup_sprite.SetY((screen.half.h - startup_image[0].GetHeight() / 2) - 100);
 
-shutimg_sprite.SetX(screen.half.w - shutimg_image[0].GetWidth() / 2); # Place images in the center
-shutimg_sprite.SetY(screen.half.h - shutimg_image[0].GetHeight() / 2);
+shutdown_sprite.SetX(screen.half.w - shutdown_image[0].GetWidth() / 2); # Place images in the center
+shutdown_sprite.SetY(screen.half.h - shutdown_image[0].GetHeight() / 2);
 
 boot_progress = 0;
 shut_progress = 0;
 
 fun refresh_callback () {
   if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume" || Plymouth.GetMode() == "updates" || Plymouth.GetMode() == "system-upgrade" || Plymouth.GetMode() == "firmware-upgrade") {
-    flyingman_sprite.SetImage(flyingman_image[Math.Int(boot_progress / 1.6) % boot]);
+    startup_sprite.SetImage(startup_image[Math.Int(boot_progress / 1.6) % boot]);
     boot_progress++;
   }
   else {
-    shutimg_sprite.SetImage(shutimg_image[Math.Int(shut_progress / 2.6) % shut]);
+    shutdown_sprite.SetImage(shutdown_image[Math.Int(shut_progress / 2.6) % shut]);
     shut_progress++;
   }
 }
 
 Plymouth.SetRefreshFunction (refresh_callback);
 
-//--------------------------------- Progress Bar ---------------------------
+// -------------------------------------------------------------------------
+// Progress Bar
+// -------------------------------------------------------------------------
 
 if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume" || Plymouth.GetMode() == "updates" || Plymouth.GetMode() == "system-upgrade" || Plymouth.GetMode() == "firmware-upgrade") {
   progress_box.image = Image("progress_box.png");
@@ -106,7 +110,10 @@ if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume" || Plymouth.G
   Plymouth.SetBootProgressFunction(progress_callback);
 }
 
-//-------------------------------- Password prompt -------------------------------
+// -------------------------------------------------------------------------
+// Question Prompt
+// -------------------------------------------------------------------------
+
 fun DisplayQuestionCallback(prompt, entry) {
   question = null;
   answer = null;
@@ -126,7 +133,10 @@ fun DisplayQuestionCallback(prompt, entry) {
 }
 Plymouth.SetDisplayQuestionFunction(DisplayQuestionCallback);
 
-//-------------------------------- Password prompt -------------------------------
+// -------------------------------------------------------------------------
+// Password Prompt
+// -------------------------------------------------------------------------
+
 fun DisplayPasswordCallback(nil, bulletCount) {
   state.status = "pause";
   totalWidth = bulletCount * bullet.image.GetWidth();
@@ -147,7 +157,10 @@ fun DisplayPasswordCallback(nil, bulletCount) {
 }
 Plymouth.SetDisplayPasswordFunction(DisplayPasswordCallback);
 
-//------------------------- Normal display (unset all text) ----------------------
+// -------------------------------------------------------------------------
+// Display Reset
+// -------------------------------------------------------------------------
+
 fun DisplayNormalCallback() {
     state.status = "play";
     bullets = null;
@@ -158,7 +171,10 @@ fun DisplayNormalCallback() {
 }
 Plymouth.SetDisplayNormalFunction(DisplayNormalCallback);
 
-//---------------------------------- Message --------------------------------
+// -------------------------------------------------------------------------
+// Set Message
+// -------------------------------------------------------------------------
+
 fun MessageCallback(text) {
     message.image = Image.Text(text, 1, 1, 1);
     message.sprite = Sprite(message.image);
