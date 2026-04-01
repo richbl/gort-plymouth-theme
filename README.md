@@ -2,32 +2,31 @@
 
 Gort is a graphical splash screen animation that runs during the boot-up and shutdown process of Linux systems that support Plymouth
 
-<!-- markdownlint-disable MD033 -->
-<!-- markdownlint-disable MD041 -->
-<p align="left">
-<img width="350" alt="gort image" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/gort.png">
-</p>
-<!-- markdownlint-enable MD033,MD041 -->
-
 <!-- ![GitHub Release](https://img.shields.io/github/v/release/richbl/go-ble-sync-cycle?include_prereleases&sort=semver&display_name=tag&color=blue) -->
 
 ## Overview
 
 **gort-plymouth-theme** is pretty much what it says on the box: a graphical splash screen animation that runs during the boot-up and shutdown process of Linux systems that support Plymouth. It's clever, and as an added bonus, I've included a startup audio file that can play as the desktop is starting. You really have to like [The Day the Earth Stood Still](https://en.wikipedia.org/wiki/The_Day_the_Earth_Stood_Still) to dig this project.
 
-### Screenshots of the Gort Plymouth Theme
+### Screens of the Gort Plymouth Theme
 
-#### Starting Up
+#### Starting Up Screen Composite
+
+#### Starting Up Gif Used
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-<img width="850" alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/startup_animation.gif">
+<img width="400" alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/startup_animation.gif">
 </p>
+<!-- markdownlint-enable MD033 -->
 
-### Shutting Down
+#### Shutting Down Screen Composite
 
+#### Shutting Down Gif Used
+
+<!-- markdownlint-disable MD033 -->
 <p align="center">
-  <a href="https://youtu.be/WjaNG7kHTqI"><img width="850" alt="Screenshot showing shutdown animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/shutdown_animation.gif"></a>
+  <a href="https://youtu.be/WjaNG7kHTqI"><img width="400" alt="Screenshot showing shutdown animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/shutdown_animation.gif"></a>
 </p>
 <!-- markdownlint-enable MD033 -->
 
