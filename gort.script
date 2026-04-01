@@ -48,18 +48,18 @@ boot = 16;
 shut = 134;
 
 // -------------------------------------------------------------------------
-// Display Images
+// Initialize and place animated images and set display refresh callback
 // -------------------------------------------------------------------------
 
 // Display a list of images while booting
 for (i = 0; i < boot; i++)
-  startup_image[i] = Image("startup-" + i + ".png");
+  startup_image[i] = Image("startup/startup-" + i + ".png");
 startup_sprite = Sprite();
 
 
 // Display a list of images while shutting down
 for (i = 0; i < shut; i++)
-  shutdown_image[i] = Image("shutdown-" + i + ".png");
+  shutdown_image[i] = Image("shutdown/shutdown-" + i + ".png");
 shutdown_sprite = Sprite();
 
 // set image position
@@ -72,6 +72,7 @@ shutdown_sprite.SetY(screen.half.h - shutdown_image[0].GetHeight() / 2);
 boot_progress = 0;
 shut_progress = 0;
 
+// Set display refresh callback based on display mode state
 fun refresh_callback () {
   if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume" || Plymouth.GetMode() == "updates" || Plymouth.GetMode() == "system-upgrade" || Plymouth.GetMode() == "firmware-upgrade") {
     startup_sprite.SetImage(startup_image[Math.Int(boot_progress / 1.6) % boot]);
@@ -86,20 +87,21 @@ fun refresh_callback () {
 Plymouth.SetRefreshFunction (refresh_callback);
 
 // -------------------------------------------------------------------------
-// Progress Bar
+// Determine display mode and set progress bar callback
 // -------------------------------------------------------------------------
 
 if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume" || Plymouth.GetMode() == "updates" || Plymouth.GetMode() == "system-upgrade" || Plymouth.GetMode() == "firmware-upgrade") {
-  progress_box.image = Image("progress_box.png");
+  progress_box.image = Image("startup/progress_box.png");
   progress_box.sprite = Sprite(progress_box.image);
   progress_box.sprite.SetX(screen.half.w - progress_box.image.GetWidth() / 2);
   progress_box.sprite.SetY(progress_y_pos); 
 
-  progress_bar.original_image = Image("progress_bar.png");
+  progress_bar.original_image = Image("startup/progress_bar.png");
   progress_bar.sprite = Sprite();
   progress_bar.sprite.SetX(screen.half.w - progress_box.image.GetWidth() / 2);
   progress_bar.sprite.SetY(progress_y_pos);  
 
+  // Set progress bar callback based on display mode state
   fun progress_callback (duration, progress) {
     if (progress_bar.image.GetWidth () != Math.Int (progress_bar.original_image.GetWidth () * progress)) {
       progress_bar.image = progress_bar.original_image.Scale(progress_bar.original_image.GetWidth(progress_bar.original_image) * progress, progress_bar.original_image.GetHeight());
@@ -111,7 +113,7 @@ if (Plymouth.GetMode() == "boot" || Plymouth.GetMode() == "resume" || Plymouth.G
 }
 
 // -------------------------------------------------------------------------
-// Question Prompt
+// Set question prompt callback
 // -------------------------------------------------------------------------
 
 fun DisplayQuestionCallback(prompt, entry) {
@@ -134,7 +136,7 @@ fun DisplayQuestionCallback(prompt, entry) {
 Plymouth.SetDisplayQuestionFunction(DisplayQuestionCallback);
 
 // -------------------------------------------------------------------------
-// Password Prompt
+// Set password prompt callback
 // -------------------------------------------------------------------------
 
 fun DisplayPasswordCallback(nil, bulletCount) {
@@ -158,7 +160,7 @@ fun DisplayPasswordCallback(nil, bulletCount) {
 Plymouth.SetDisplayPasswordFunction(DisplayPasswordCallback);
 
 // -------------------------------------------------------------------------
-// Display Reset
+// Set display prompt reset callback
 // -------------------------------------------------------------------------
 
 fun DisplayNormalCallback() {
@@ -172,7 +174,7 @@ fun DisplayNormalCallback() {
 Plymouth.SetDisplayNormalFunction(DisplayNormalCallback);
 
 // -------------------------------------------------------------------------
-// Set Message
+// Set message callback
 // -------------------------------------------------------------------------
 
 fun MessageCallback(text) {

@@ -59,6 +59,10 @@ As there are quite a few online resources available depending the Linux distribu
 5. Optionally, move the audio `*.ogg` file into a startup folder for playback during desktop startup (location and mechanism depends on your distribution)
 6. Done!
 
+## Resources
+
+For those interested in learning more about how Plymouth works, check out the [Plymouth documentation](https://www.freedesktop.org/wiki/Software/Plymouth/), and specifically the official [Plymouth scripts](https://www.freedesktop.org/wiki/Software/Plymouth/Scripts/) section.
+
 ## License
 
 **gort-plymouth-theme** is released under the [MIT License](https://github.com/richbl/gort-plymouth-theme/blob/main/LICENSE).
