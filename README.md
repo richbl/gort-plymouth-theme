@@ -10,7 +10,7 @@ Gort is a graphical splash screen animation that runs during the boot-up and shu
 
 ### Screens of the Gort Plymouth Theme
 
-#### Start Up Screen Composite
+#### Start Up Screen
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
@@ -18,15 +18,7 @@ Gort is a graphical splash screen animation that runs during the boot-up and shu
 </p>
 <!-- markdownlint-enable MD033 -->
 
-#### Start Up Gif Used
-
-<!-- markdownlint-disable MD033 -->
-<p align="center">
-<img width="300" alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/startup_animation.gif">
-</p>
-<!-- markdownlint-enable MD033 -->
-
-#### Shut Down Screen Composite
+#### Shut Down Screen
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
@@ -34,17 +26,9 @@ Gort is a graphical splash screen animation that runs during the boot-up and shu
 </p>
 <!-- markdownlint-enable MD033 -->
 
-#### Shut Down Gif Used
-
-<!-- markdownlint-disable MD033 -->
-<p align="center">
-  <a href="https://youtu.be/WjaNG7kHTqI"><img width="300" alt="Screenshot showing shutdown animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/shutdown_animation.gif"></a>
-</p>
-<!-- markdownlint-enable MD033 -->
-
 ## Features
 
-* Custom startup animation (with disk encryption password prompt)
+* Custom startup animation (with encryption password prompt)
 * Custom shutdown animation
 * Audio file included with the theme for DE startup playback
 
