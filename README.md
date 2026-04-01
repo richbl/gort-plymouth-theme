@@ -14,7 +14,7 @@ Gort is a graphical splash screen animation that runs during the boot-up and shu
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-<img alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/gort_startup.png">
+<img alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/gort_startup.gif">
 </p>
 <!-- markdownlint-enable MD033 -->
 
@@ -22,7 +22,7 @@ Gort is a graphical splash screen animation that runs during the boot-up and shu
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-<img alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/gort_shutdown.png">
+<img alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/gort_shutdown.gif">
 </p>
 <!-- markdownlint-enable MD033 -->
 
