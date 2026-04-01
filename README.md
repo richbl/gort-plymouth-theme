@@ -10,23 +10,35 @@ Gort is a graphical splash screen animation that runs during the boot-up and shu
 
 ### Screens of the Gort Plymouth Theme
 
-#### Starting Up Screen Composite
-
-#### Starting Up Gif Used
+#### Start Up Screen Composite
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-<img width="400" alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/startup_animation.gif">
+<img alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/gort_startup.png">
 </p>
 <!-- markdownlint-enable MD033 -->
 
-#### Shutting Down Screen Composite
-
-#### Shutting Down Gif Used
+#### Start Up Gif Used
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-  <a href="https://youtu.be/WjaNG7kHTqI"><img width="400" alt="Screenshot showing shutdown animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/shutdown_animation.gif"></a>
+<img width="300" alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/startup_animation.gif">
+</p>
+<!-- markdownlint-enable MD033 -->
+
+#### Shut Down Screen Composite
+
+<!-- markdownlint-disable MD033 -->
+<p align="center">
+<img alt="Screenshot showing startup animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/gort_shutdown.png">
+</p>
+<!-- markdownlint-enable MD033 -->
+
+#### Shut Down Gif Used
+
+<!-- markdownlint-disable MD033 -->
+<p align="center">
+  <a href="https://youtu.be/WjaNG7kHTqI"><img width="300" alt="Screenshot showing shutdown animation" src="https://raw.githubusercontent.com/richbl/gort-plymouth-theme/refs/heads/main/.github/assets/shutdown_animation.gif"></a>
 </p>
 <!-- markdownlint-enable MD033 -->
 
@@ -38,7 +50,7 @@ Gort is a graphical splash screen animation that runs during the boot-up and shu
 
 ## Installation
 
-As there are quite a few online resources available depending the Linux distribution you are using, I'll defer to your keen sense for finding the best way to install this theme. But, in short, here's the procedure at a high level:
+As there are quite a few online resources available depending the Linux distribution you're using, I'll defer to your keen sense of adventure for finding the best way to install this theme. But, in short, here's the procedure at a high level:
 
 1. Download this theme from [GitHub](https://github.com/richbl/gort-plymouth-theme)
 2. Copy the project source files into `/usr/share/plymouth/themes/gort` on your system
