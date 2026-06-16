@@ -2,7 +2,9 @@
 
 Gort is a graphical splash screen animation that runs during the boot-up and shutdown process of Linux systems that support Plymouth
 
-![GitHub Release](https://img.shields.io/github/v/release/richbl/gort-plymouth-theme?include_prereleases&sort=semver&display_name=tag&color=blue)
+<!-- markdownlint-disable MD033 -->
+<a href="https://github.com/richbl/gort-plymouth-theme/releases"><img alt="Link to Releases" src="https://badgen.net/github/tag/richbl/gort-plymouth-theme?icon=github&label=release"></a>
+<!-- markdownlint-enable MD033 -->
 
 ## Overview
 
